@@ -6,11 +6,11 @@ from datetime import datetime
 from twitter_etl import run_twitter_etl
 
 default_args = {
-    'owner': 'airflow',
-    'depends_on_past': False,
+    'owner': 'Keshav', 
+    'depends_on_past': False,  # any depencies on past DAG
     'start_date': datetime(2020, 11, 8),
-    'email': ['airflow@example.com'],
-    'email_on_failure': False,
+    'email': ['keshavasokan@gmail.com'],
+    'email_on_failure': True,
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=1)
@@ -30,3 +30,4 @@ run_etl = PythonOperator(
 )
 
 run_etl
+
